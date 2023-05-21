@@ -10,8 +10,10 @@ Paste your code for fetch requests here once you finish each task.
 */
 
 // Your code here
-
-
+  const res = fetch("/posts");
+  res.then(response => console.log(response.ok))
+  res.then(response => console.log(response.status))
+  res.then(response => console.log(response.text()))
 
 /* =============================== Phase 2 ================================ */
 /*
@@ -20,3 +22,12 @@ Paste your code for fetch requests here once you finish each task.
 */
 
 // Your code here
+const options = {
+  method : "POST",
+  headers: {"Content-Type":"application/json"},
+  body: JSON.stringify({
+    message: "New Post!"
+  })
+
+}
+const post = fetch("/posts", options)
