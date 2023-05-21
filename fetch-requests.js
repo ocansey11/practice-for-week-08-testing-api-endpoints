@@ -26,7 +26,8 @@ const options = {
   method : "POST",
   headers: {"Content-Type":"application/json"},
   body: JSON.stringify({
-    message: "New Post!"
+    postId: 3,
+    message: "New Post! (3rd Post)"
   })
 
 }
